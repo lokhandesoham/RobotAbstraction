@@ -2,6 +2,10 @@
 
 RobotAbstraction is a Webots-based robotic workcell demo that shows how a factory manager can operate industrial robots through intent instead of low-level robot commands.
 
+![RobotAbstraction demo: the operator asks for maximum production and the agent switches the workcell to high-capacity mode](docs/demo.gif)
+
+*The operator types "run the cell at maximum production"; the agent plans high-capacity mode and the coordinator speeds up both conveyors and the robots. [Watch the full 4-minute demo (MP4)](docs/demo.mp4).*
+
 The project combines:
 
 - A Universal Robots can-handling cell with `UR3e`, `UR5e`, and `UR10e`

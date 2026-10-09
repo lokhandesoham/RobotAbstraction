@@ -22,6 +22,8 @@ Give me a production report
 
 The agent maps that intent to a small, controlled set of workcell tools. The coordinator then translates those high-level tools into the robot-specific behavior needed inside the simulation.
 
+**Tech stack:** Python · Google ADK · Gemini · C (Webots controllers) · Node.js · React · TypeScript · Webots R2025a
+
 ## Why This Matters
 
 Industrial workcells often contain robots from different vendors, each with different APIs, motion programs, state machines, and safety constraints. A factory manager usually cares about production goals:
@@ -213,10 +215,11 @@ If Webots is installed somewhere else, set `WEBOTS_HOME`.
 
 ## Setup
 
-From the repository root:
+Clone the repository:
 
 ```bash
-cd /path/to/20260513-hackathon
+git clone https://github.com/lokhandesoham/RobotAbstraction.git
+cd RobotAbstraction
 ```
 
 ### 1. Set up the agent service
@@ -469,3 +472,7 @@ operator goal -> agent tool -> coordinator command -> robot-specific controller
 ```
 
 That keeps the operator experience consistent even as the underlying robot hardware changes.
+
+## Credits
+
+Built during a team hackathon in May 2026. The base Webots simulation (UR can gripping and ScaraT6 fruit sorting) was developed by Thalanayar Muthukumar. The agent service, coordinator control layer (operation modes, production targets, robot and line control), Node.js bridge, and operator dashboard were built by [Soham Lokhande](https://github.com/lokhandesoham).

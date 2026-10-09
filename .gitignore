@@ -12,3 +12,13 @@ frontend/dist/
 *.swp
 *.swo
 .env
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Compiled Webots C controllers (rebuilt by `make` / start_all.sh)
+*/controllers/conveyor_belt/conveyor_belt
+*/controllers/coordinator/coordinator
+*/controllers/ur_arm_executor/ur_arm_executor
+*/controllers/ure_can_grasper/ure_can_grasper
